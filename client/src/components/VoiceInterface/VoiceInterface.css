@@ -74,9 +74,10 @@
 
 .voice-status {
   font-size: 0.875rem;
-  color: #4b5563;
+  color: white;
   margin-bottom: 0.5rem;
   display: block;
   margin-top: 0.5rem;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 0 10px;
 }
 

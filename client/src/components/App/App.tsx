@@ -1,5 +1,6 @@
+import './App.css';
 import { Header } from '../Header';
-// import { VideoPlayer } from '../VideoPlayer';
+import { VideoPlayer } from '../VideoPlayer';
 import { MessageContainer } from '../MessageContainer';
 import { VoiceInterface } from '../VoiceInterface';
 import { VoiceProvider } from '@humeai/voice-react';
@@ -12,9 +13,6 @@ export const App = () => {
     switch (msg.type) {
       case 'user_message':
       case 'assistant_message':
-        // if (msg.type === 'user_message') {
-        //   playerRef.current?.stop();
-        // }
         dispatch({ type: 'append_msg', payload: msg });
         break;
       case 'audio_output':
@@ -40,7 +38,7 @@ export const App = () => {
           <VoiceInterface />
         </div>
       </VoiceProvider>
-      {/* <VideoPlayer /> */}
+      <VideoPlayer />
     </>
   );
 };

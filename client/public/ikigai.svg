@@ -1,0 +1,28 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .circle { opacity: 0.8; }
+      .text { font-family: 'Arial', sans-serif; font-size: 14px; fill: #2c3e50; font-weight: 500; }
+      .center-text { font-family: 'Arial', sans-serif; font-size: 18px; fill: #2c3e50; font-weight: 700; text-anchor: middle; }
+      .ikigai-text { font-family: 'Arial', sans-serif; font-size: 24px; fill: #2c3e50; font-weight: 700; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="none" stroke="#e8e8e8" stroke-width="2"/>
+  
+  <!-- Four overlapping circles representing the four elements of Ikigai -->
+  <!-- What you LOVE (top-left) - Passion -->
+  <circle cx="160" cy="160" r="80" fill="#ff6b6b" class="circle"/>
+  
+  <!-- What you're GOOD AT (top-right) - Mission -->
+  <circle cx="240" cy="160" r="80" fill="#4ecdc4" class="circle"/>
+  
+  <!-- What the world NEEDS (bottom-left) - Vocation -->
+  <circle cx="160" cy="240" r="80" fill="#45b7d1" class="circle"/>
+  
+  <!-- What you can be PAID FOR (bottom-right) - Profession -->
+  <circle cx="240" cy="240" r="80" fill="#96ceb4" class="circle"/>
+  
+
+</svg>

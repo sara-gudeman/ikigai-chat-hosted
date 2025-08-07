@@ -40,22 +40,6 @@ export const VoiceInterface = () => {
   };
   const disconnectToHume = () => {
     disconnect();
-    // if (!socketRef.current) return;
-
-    // // Avoid recursive close loop
-    // const socket = socketRef.current;
-    // socketRef.current = null;
-
-    // if (socket.readyState < WebSocket.CLOSING) {
-    //   socket.close(); // Triggers handleClose, but socketRef is now null
-    // }
-
-    // recorderRef.current?.stream.getTracks().forEach(t => t.stop());
-    // recorderRef.current = null;
-
-    // playerRef.current?.dispose();
-
-    // dispatch({ type: 'set_connected', payload: false });
   };
   return (
     <div className="voice-interface">
@@ -75,30 +59,3 @@ export const VoiceInterface = () => {
     </div>
   );
 };
-
-// export const VoiceInterface = ({
-//   connect,
-//   disconnect,
-//   connected,
-// }: {
-//   connect: () => void;
-//   disconnect: () => void;
-//   connected: boolean;
-// }) => {
-//   return (
-//     <div className="voice-interface">
-//       <div className="voice-controls">
-//         <div className="voice-button-container">
-//           <div className="voice-button-wrapper">
-//             <button
-//               onClick={connected ? disconnect : connect}
-//               className={`voice-button ${connected ? 'listening' : 'idle'}`}
-//             >
-//               <Mic className="voice-icon" />
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
