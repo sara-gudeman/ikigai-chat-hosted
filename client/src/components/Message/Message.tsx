@@ -22,7 +22,6 @@ export const Message: React.FC<{ msg: ChatMessage }> = ({ msg }) => {
   // const scores = msg.models?.prosody?.scores || {};
   const topEmotions = extractTopThreeEmotions(msg);
   const topEmotion = topEmotions[0]?.emotion.toLowerCase() || 'neutral';
-  console.log('ChatMessage:', msg.id, msg);
 
   return (
     <div className={`message-row ${role}`}>

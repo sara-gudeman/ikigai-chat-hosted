@@ -19,6 +19,7 @@ export const initialState: State = {
 export function chatReducer(state: State, action: Action): State {
   switch (action.type) {
     case 'append_msg':
+      console.log('Appending message:', action.payload);
       const messageWithId = {
         ...action.payload,
         id: uuidv4(),

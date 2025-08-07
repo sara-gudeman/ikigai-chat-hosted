@@ -34,7 +34,7 @@
   cursor: not-allowed;
 }
 
-.voice-button.listening {
+.voice-button.connected {
   background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transform: scale(1.1);
@@ -45,12 +45,18 @@
   background: linear-gradient(to right, #9ca3af, #6b7280);
 } */
 
-.voice-button.idle {
+.voice-button.disconnected {
   background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.voice-button.idle:hover {
+.voice-button.connecting {
+  transform: scale(1.2);
+  background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
+  animation: pulse 1s infinite;
+}
+
+.voice-button.disconnected:hover {
   background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
 }
@@ -62,7 +68,7 @@
   transition: all 0.3s;
 }
 
-.voice-icon.idle {
+.voice-icon.disconnected {
   transform: scale(1);
 }
 
@@ -70,4 +76,7 @@
   font-size: 0.875rem;
   color: #4b5563;
   margin-bottom: 0.5rem;
+  display: block;
+  margin-top: 0.5rem;
 }
+
