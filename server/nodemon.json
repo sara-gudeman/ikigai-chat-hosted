@@ -1,0 +1,6 @@
+{
+  "watch": ["."],
+  "ignore": ["node_modules/**/*", "dist/**/*", ".git/**/*"],
+  "ext": "ts",
+  "exec": "npx ts-node index.ts"
+}

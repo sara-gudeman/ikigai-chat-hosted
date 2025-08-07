@@ -1,0 +1,22 @@
+.chat-header {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #a2ba60;
+  margin-bottom: 20px;
+  font-family: Futura;
+}
+
+.chat-title {
+  font-size: 35px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.chat-subtitle {
+  color: white;
+  font-size: 14px;
+}

@@ -1,0 +1,158 @@
+.message-row {
+  display: flex;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.assistant {
+  justify-content: flex-start;
+}
+
+/* Message bubbles */
+.message-bubble {
+  max-width: 20rem;
+  margin-block: 0;
+  padding: 0;
+  padding: 10px 15px;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.message-bubble.user {
+  background: linear-gradient(135deg, #fff, #fcecdc);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #312e28;
+}
+
+.message-bubble.assistant {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #312e28;
+  background: linear-gradient(135deg, #c3c388, #fff);
+}
+
+/* Message text */
+.message-text {
+  font-size: 14px;
+  line-height: 1.625;
+  padding-bottom: 5px;
+  display: block;
+  margin-block: 0;
+}
+
+/* Emotion Categories and Enhanced Gradients for Ikigai Chat */
+
+/* ========================================
+   POSITIVE EMOTIONS
+   ======================================== */
+/* .message-bubble.assistant.admiration,
+.message-bubble.assistant.adoration,
+.message-bubble.assistant.aestheticAppreciation,
+.message-bubble.assistant.amusement,
+.message-bubble.assistant.awe,
+.message-bubble.assistant.calmness,
+.message-bubble.assistant.contentment,
+.message-bubble.assistant.desire,
+.message-bubble.assistant.determination,
+.message-bubble.assistant.ecstasy,
+.message-bubble.assistant.excitement,
+.message-bubble.assistant.interest,
+.message-bubble.assistant.joy,
+.message-bubble.assistant.love,
+.message-bubble.assistant.nostalgia,
+.message-bubble.assistant.pride,
+.message-bubble.assistant.relief,
+.message-bubble.assistant.romance,
+.message-bubble.assistant.satisfaction,
+.message-bubble.assistant.surprisePositive,
+.message-bubble.assistant.triumph {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #dbeafe 100%);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+} */
+
+/* ========================================
+   NEUTRAL EMOTIONS
+   ======================================== */
+
+/* .message-bubble.assistant.contemplative,
+.message-bubble.assistant.concentrated,
+.message-bubble.assistant.entrancement,
+.message-bubble.assistant.realization,
+.message-bubble.assistant.sympathy {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 30%, #cbd5e1 70%, #94a3b8 100%);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+} */
+
+/* ========================================
+   NEGATIVE EMOTIONS
+   ======================================== */
+/* .message-bubble.assistant.anger,
+.message-bubble.assistant.anxiety,
+.message-bubble.assistant.awkwardness,
+.message-bubble.assistant.boredom,
+.message-bubble.assistant.confusion,
+.message-bubble.assistant.contempt,
+.message-bubble.assistant.craving,
+.message-bubble.assistant.disappointment,
+.message-bubble.assistant.disgust,
+.message-bubble.assistant.distress,
+.message-bubble.assistant.doubt,
+.message-bubble.assistant.embarrassment,
+.message-bubble.assistant.empathicPain,
+.message-bubble.assistant.envy,
+.message-bubble.assistant.fear,
+.message-bubble.assistant.guilt,
+.message-bubble.assistant.horror,
+.message-bubble.assistant.pain,
+.message-bubble.assistant.sadness,
+.message-bubble.assistant.shame,
+.message-bubble.assistant.surpriseNegative,
+.message-bubble.assistant.tiredness {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 30%, #e2e8f0 70%, #b8c5d1 100%);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+} */
+
+/* ========================================
+   HOVER EFFECTS FOR EMOTION BUBBLES
+   ======================================== */
+
+/* .message-bubble.assistant:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+} */
+
+/* Emotion header */
+.emotion-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.emotion-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-text {
+  text-transform: capitalize;
+}
+
+/* Message text */
+.message-text {
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 5px;
+  text-align: right;
+  display: block;
+}

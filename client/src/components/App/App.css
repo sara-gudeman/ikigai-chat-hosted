@@ -1,0 +1,11 @@
+/* Main container */
+.chat-wrapper {
+  margin: 0 auto;
+  max-width: 56rem; /* max-w-4xl */
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}

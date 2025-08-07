@@ -1,0 +1,73 @@
+/* Voice interface */
+.voice-interface {
+  padding-top: 1rem;
+}
+
+.voice-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voice-button-container {
+  text-align: center;
+}
+
+.voice-button-wrapper {
+  margin-bottom: 0.75rem;
+}
+
+.voice-button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.voice-button:disabled {
+  cursor: not-allowed;
+}
+
+.voice-button.listening {
+  background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  /* animation: pulse 1s infinite; */
+}
+
+/* .voice-button.loading {
+  background: linear-gradient(to right, #9ca3af, #6b7280);
+} */
+
+.voice-button.idle {
+  background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.voice-button.idle:hover {
+  background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+.voice-icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  transition: all 0.3s;
+}
+
+.voice-icon.idle {
+  transform: scale(1);
+}
+
+.voice-status {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
