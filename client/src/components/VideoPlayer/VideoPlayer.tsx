@@ -5,7 +5,7 @@ export const VideoPlayer = () => {
   // TODO: this is massive and should be optimized :)
   // also this could be in assets
   return (
-    <video autoPlay playsInline muted width="640" height="360">
+    <video autoPlay playsInline muted controls={false} width="640" height="360">
       <source src={myVideo} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
