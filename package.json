@@ -11,7 +11,7 @@
     "build": "pnpm run build:client && pnpm run build:server",
     "build:client": "cd client && pnpm run build",
     "build:server": "cd server && pnpm run build",
-    "start": "cd server && pnpm run start:prod",
+    "start": "pnpm run build:server && cd server && pnpm run start:prod",
     "install:all": "pnpm install && cd client && pnpm install && cd ../server && pnpm install",
     "docker:build": "docker build -t ikigai-chat-hosted .",
     "docker:run": "docker run -p 3001:3001 ikigai-chat-hosted:latest",
