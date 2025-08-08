@@ -1,7 +1,6 @@
 // server.js
 import express from 'express';
 import dotenv from 'dotenv';
-import { createServer } from 'http';
 import { fetchAccessToken } from 'hume';
 import helmet from 'helmet';
 import { fileURLToPath } from 'url';
@@ -24,8 +23,6 @@ app.use((req, res, next) => {
   );
   next();
 });
-
-// Get current directory for ES modules
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -52,9 +49,6 @@ app.use(express.static(publicPath));
 app.get('/', (req, res) => {
   res.sendFile(join(publicPath, '/index.html'));
 });
-
-// Create HTTP server from Express app
-const server = createServer(app);
 
 // Start server on single port
 const PORT = Number(process.env.PORT) || 3001;
