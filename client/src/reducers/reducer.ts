@@ -14,7 +14,6 @@ export const initialState: State = {
 export function chatReducer(state: State, action: Action): State {
   switch (action.type) {
     case 'append_msg':
-      console.log('Appending message:', action.payload);
       // TODO: remove this once we figure out why messages are doubly appending
       if (
         state.messages[state.messages.length - 1]?.message.content ===

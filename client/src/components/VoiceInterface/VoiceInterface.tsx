@@ -17,8 +17,7 @@ export const VoiceInterface = () => {
             return data;
           });
         const { accessToken } = response;
-        setAccessToken(accessToken);
-        console.log('accessToken:', response);
+        setAccessToken(accessToken); // TODO: this is getting called twice for some reason
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -26,7 +25,6 @@ export const VoiceInterface = () => {
     fetchToken();
   }, []);
   const connectToHume = () => {
-    console.log('Connecting to Hume with access token:', accessToken);
     try {
       connect({
         auth: { type: 'accessToken', value: accessToken },
