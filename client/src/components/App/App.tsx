@@ -9,6 +9,7 @@ import { chatReducer, initialState } from '../../reducers/reducer';
 
 export const App = () => {
   const [state, dispatch] = useReducer(chatReducer, initialState);
+  // TODO: look into why this setup has introduced a lag
   const handleMessage = (msg: any) => {
     switch (msg.type) {
       case 'user_message':

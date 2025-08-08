@@ -2,6 +2,7 @@ import myVideo from './bg.mp4';
 import './VideoPlayer.css';
 
 export const VideoPlayer = () => {
+  // TODO: this is massive and should be optimized :)
   return (
     <video autoPlay muted width="640" height="360">
       <source src={myVideo} type="video/mp4" />
