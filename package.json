@@ -12,7 +12,11 @@
     "build:client": "cd client && pnpm run build",
     "build:server": "cd server && pnpm run build",
     "start": "cd server && pnpm run start:prod",
-    "install:all": "pnpm install && cd client && pnpm install && cd ../server && pnpm install"
+    "install:all": "pnpm install && cd client && pnpm install && cd ../server && pnpm install",
+    "docker:build": "docker build -t ikigai-chat-hosted .",
+    "docker:run": "docker run -p 3001:3001 ikigai-chat-hosted:latest",
+    "docker:clean": "docker system prune -f",
+    "render:deploy": "echo 'Push to main branch to trigger Render deployment'"
   },
   "keywords": [],
   "author": "",

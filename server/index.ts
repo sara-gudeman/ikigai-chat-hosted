@@ -15,6 +15,16 @@ const app = express();
 
 app.use(helmet());
 
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "script-src 'self' https://storage.googleapis.com; " +
+      "connect-src 'self' wss://api.hume.ai https://api.hume.ai; " +
+      "worker-src 'self' blob:;",
+  );
+  next();
+});
+
 // Get current directory for ES modules
 
 const isDevelopment = process.env.NODE_ENV !== 'production';

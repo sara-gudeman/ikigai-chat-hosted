@@ -11,7 +11,7 @@ export const VoiceInterface = () => {
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/token`)
+        const response = await fetch(`/api/token`)
           .then(response => response.json())
           .then(data => {
             return data;
