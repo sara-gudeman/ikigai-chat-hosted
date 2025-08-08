@@ -3,9 +3,11 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { createServer } from 'http';
 import { fetchAccessToken } from 'hume';
+import helmet from 'helmet';
 
 dotenv.config();
 const app = express();
+app.use(helmet());
 
 app.get('/api/token', async (req, res) => {
   const HUME_API_KEY = process.env.HUME_API_KEY || '';
