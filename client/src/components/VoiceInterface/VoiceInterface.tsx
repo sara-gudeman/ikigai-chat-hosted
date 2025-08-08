@@ -1,6 +1,6 @@
 // change isListening and isLoading to something like listeningState
 
-import { Mic } from 'lucide-react';
+import { Mic, LoaderCircle } from 'lucide-react';
 import './VoiceInterface.css';
 import { useVoice } from '@humeai/voice-react';
 import { useEffect, useState } from 'react';
@@ -39,16 +39,28 @@ export const VoiceInterface = () => {
   const disconnectToHume = () => {
     disconnect();
   };
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    if (status.value === 'connected') {
+      disconnectToHume();
+    } else {
+      connectToHume();
+    }
+  };
   return (
     <div className="voice-interface">
       <div className="voice-controls">
         <div className="voice-button-container">
           <div className="voice-button-wrapper">
             <button
-              onClick={status.value === 'connected' ? disconnectToHume : connectToHume}
+              onClick={handleClick}
               className={`voice-button ${status.value}`}
             >
-              <Mic className="voice-icon" />
+              {status.value === 'connecting' ? (
+                <LoaderCircle className="voice-icon connecting" />
+              ) : (
+                <Mic className={`voice-icon ${status.value}`} />
+              )}
             </button>
             <span className="voice-status">{status.value}</span>
           </div>
