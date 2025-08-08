@@ -6,8 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"pnpm run server\" \"pnpm run client\"",
-    "server": "cd server && pnpm run dev",
-    "client": "cd client && pnpm run dev"
+    "server": "cd server && pnpm run start:dev",
+    "client": "cd client && pnpm run start:dev",
+    "build": "pnpm run build:client && pnpm run build:server",
+    "build:client": "cd client && pnpm run build",
+    "build:server": "cd server && pnpm run build",
+    "start": "cd server && pnpm run start:prod",
+    "install:all": "pnpm install && cd client && pnpm install && cd ../server && pnpm install"
   },
   "keywords": [],
   "author": "",

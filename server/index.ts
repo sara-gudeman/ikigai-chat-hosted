@@ -4,10 +4,26 @@ import dotenv from 'dotenv';
 import { createServer } from 'http';
 import { fetchAccessToken } from 'hume';
 import helmet from 'helmet';
+import { fileURLToPath } from 'url';
+import { dirname, join, resolve } from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 dotenv.config();
+
 const app = express();
+
 app.use(helmet());
+
+// Get current directory for ES modules
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
+const publicPath = isDevelopment
+  ? resolve(__dirname, '../client/dist')
+  : resolve(__dirname, '../../client/dist');
+
+app.use(express.static(publicPath));
 
 app.get('/api/token', async (req, res) => {
   const HUME_API_KEY = process.env.HUME_API_KEY || '';
@@ -17,6 +33,14 @@ app.get('/api/token', async (req, res) => {
     secretKey: HUME_SECRET_KEY,
   });
   res.send({ accessToken });
+});
+
+// Serve React app static files
+app.use(express.static(publicPath));
+
+// // Catch-all handler: send back React's index.html file for any non-API routes
+app.get('/', (req, res) => {
+  res.sendFile(join(publicPath, '/index.html'));
 });
 
 // Create HTTP server from Express app
