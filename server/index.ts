@@ -58,7 +58,9 @@ const server = createServer(app);
 
 // Start server on single port
 const PORT = process.env.PORT || 3001;
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`HTTP: http://localhost:${PORT}`);
+const HOST = '0.0.0.0'; // Important for Render!
+
+// TODO: fix this ts error later
+app.listen(PORT, HOST, () => {
+  console.log(`Server running on ${HOST}:${PORT}`);
 });

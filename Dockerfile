@@ -24,7 +24,7 @@ COPY . .
 RUN pnpm run build
 
 # Expose port
-EXPOSE 3001
+EXPOSE $PORT
 
 # Start the server
 CMD ["pnpm", "start"]
