@@ -40,7 +40,6 @@ export const VoiceInterface = () => {
     disconnect();
   };
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
     if (status.value === 'connected') {
       disconnectToHume();
     } else {
