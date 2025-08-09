@@ -51,7 +51,7 @@
   /* animation: pulse 1s infinite; */
 }
 
-.voice-button.disconnected:hover {
+.voice-button.disconnected:hover:not(:disabled) {
   background: linear-gradient(to right, rgb(190 216 117), rgb(133 166 20));
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
 }
@@ -93,3 +93,43 @@
     transform: rotate(360deg); /* Ending state: full rotation */
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.text-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.text-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+/* .text { 
+  transition: opacity 0.5s;
+}
+
+.text.visible { 
+ opacity: 1;
+}
+
+.text.hidden { 
+ opacity: 0
+} */

@@ -11,6 +11,7 @@ export const App = () => {
   const [state, dispatch] = useReducer(chatReducer, initialState);
   // TODO: look into why this setup has introduced a lag
   const handleMessage = (msg: any) => {
+    console.log(msg.type)
     switch (msg.type) {
       case 'user_message':
       case 'assistant_message':
@@ -30,6 +31,7 @@ export const App = () => {
         break;
     }
   };
+
   return (
     <>
       <VoiceProvider onMessage={handleMessage}>
