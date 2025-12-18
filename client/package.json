@@ -1,7 +1,7 @@
 {
   "name": "client",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "start:dev": "vite",
@@ -14,8 +14,8 @@
     "hume": "^0.12.2",
     "lucide-react": "^0.537.0",
     "modern-normalize": "^3.0.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
